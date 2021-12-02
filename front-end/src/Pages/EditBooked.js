@@ -102,7 +102,7 @@ function EditBooked({ lat, lng, formatter, user_id }) {
   const handleZipSubmit = async (e) => {
     e.preventDefault();
     const data = await api.getVendorsZip(category, zip);
-    if (data[0].id) {
+    if (data.length && data[0].id) {
       setVendors(data);
     }
     setSearched(true);
