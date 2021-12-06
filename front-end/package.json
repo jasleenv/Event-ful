@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "firebase": "^9.1.0",
+    "node": "^17.2.0",
+    "node-sass": "^7.0.0",
     "react": "^17.0.2",
     "react-countdown-circle-timer": "^2.5.4",
     "react-dom": "^17.0.2",
@@ -19,8 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+   "build": "NODE_OPTIONS=--openssl-legacy-provider npm run build:test-app:testing",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
